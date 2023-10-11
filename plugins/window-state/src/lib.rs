@@ -372,9 +372,9 @@ impl MonitorExt for Monitor {
         let PhysicalPosition { x, y } = *self.position();
         let PhysicalSize { width, height } = *self.size();
 
-        x < position.x as _
+        x < position.x as i32
             && position.x < (x + width as i32)
-            && y < position.y as _
+            && y < position.y as i32
             && position.y < (y + height as i32)
     }
 }
